@@ -1,0 +1,232 @@
+/* 全体 */
+body {
+  font-family: inter, helvetica neue, arial, hiragino kaku gothic pron,
+    hiragino sans, meiryo, sans-serif;
+  background-color: #181b29;
+  color: fff;
+}
+pre {
+  margin: 1em 0;
+  padding: 1em;
+  border-radius: 5px;
+  background: #212431;
+  color: #fff;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+ul {
+  list-style: none;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-2 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 25px 10px 10px;
+  background-color: #181b29;
+}
+
+.footer-2__logo {
+  width: 130px;
+  height: 30px;
+}
+
+.footer-2__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 1.5em;
+  list-style-type: none;
+  margin: 0 0 0.5em;
+  padding: 0.5em;
+}
+
+.footer-2__sns-icon {
+  width: 21px;
+  height: 21px;
+}
+
+.footer-2__copyright {
+  margin: 0;
+  color: #ffffffb3;
+  font-weight: 200;
+  font-size: 0.8em;
+}
+/*  */
+
+/* 一覧 */
+a:hover {
+  color: #ccc;
+}
+
+a:visited {
+  color: #999;
+}
+.white-menu-icon {
+  color: white;
+}
+header {
+  padding-bottom: 20px;
+  border-bottom: 1px ridge #343446;
+  position: relative;
+}
+
+header div {
+  max-width: 768px;
+  width: 100%;
+  height: 65px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-content {
+  display: block;
+  position: absolute;
+  right: 30%;
+  top: 100%;
+
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+  width: 200px;
+  z-index: 1;
+}
+
+.menu-content div {
+  padding: 5px 20px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #181b29;
+}
+
+.search-area {
+  padding-top: 30px;
+  max-width: 768px;
+  width: 100%;
+  height: 65px;
+  margin: 0 auto;
+}
+.search-form-6 {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid #dfe1e5;
+  border-radius: 24px;
+}
+
+.search-form-6:hover {
+  box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+}
+
+.search-form-6::before {
+  width: 45px;
+  height: 15px;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%20%3Cpath%20d%3D%22M23.7%2020.8%2019%2016.1c-.2-.2-.5-.3-.8-.3h-.8c1.3-1.7%202-3.7%202-6C19.5%204.4%2015.1%200%209.7%200S0%204.4%200%209.7s4.4%209.7%209.7%209.7c2.3%200%204.3-.8%206-2v.8c0%20.3.1.6.3.8l4.7%204.7c.4.4%201.2.4%201.6%200l1.3-1.3c.5-.5.5-1.2.1-1.6zm-14-5.1c-3.3%200-6-2.7-6-6s2.7-6%206-6%206%202.7%206%206-2.6%206-6%206z%22%20fill%3D%22%239aa0a6%22%3E%3C%2Fpath%3E%20%3C%2Fsvg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  content: "";
+}
+
+.search-form-6 input {
+  color: #fff;
+  width: 250px;
+  height: 40px;
+  padding: 5px 25px 5px 0;
+  border: none;
+  box-sizing: border-box;
+  outline: none;
+  background-color: transparent;
+}
+.contents-area {
+  max-width: 768px;
+  width: 100%;
+  margin: 0 auto;
+}
+.contents-area h1 {
+  color: #fff;
+}
+
+.contents-grid {
+  padding-inline-start: 0px;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.contents-grid li {
+  width: 350px;
+  height: 230px;
+
+  margin: 20px;
+
+  background-color: #212432;
+}
+
+.content-item {
+  padding: 16px;
+}
+.content-item img {
+  display: block;
+  margin: auto;
+  background-color: transparent;
+}
+.content-item h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+.content-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+/*  */
+
+/* 詳細ページ */
+.container {
+  max-width: 768px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.heading-area {
+  padding-top: 40px;
+}
+.heading-area img {
+  display: block;
+  margin: auto;
+}
+
+.heading-area h1 {
+  color: #fff;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.content-flex {
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 0;
+}
+
+.content-area {
+  color: #d4dbe0;
+  line-height: 2.5;
+}
+@media screen and (max-width: 768px) {
+  header div {
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+  .contents-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

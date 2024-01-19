@@ -10,6 +10,7 @@ export type Blog = {
   title: string;
   content: string;
   eyecatch?: MicroCMSImage;
+  category: string[];
 } & MicroCMSDate;
 
 if (!process.env.MICROCMS_SERVICE_DOMAIN) {
@@ -32,10 +33,28 @@ export const getList = async (queries?: MicroCMSQueries) => {
     queries,
   });
 
-  // データの取得が目視しやすいよう明示的に遅延効果を追加
-  await new Promise((resolve) => setTimeout(resolve, 3000));
-
   return listData;
+};
+// カテゴリーごとの記事件数を取得する関数
+export const getCategoryArticleCounts = async () => {
+  const categories = await client.getList({ endpoint: "categories" });
+
+  const categoryCounts = await Promise.all(
+    categories.contents.map(async (category) => {
+      const articles = await client.getList({
+        endpoint: "blogs",
+        queries: { filters: `category[contains]${category.id}` },
+      });
+
+      return {
+        categoryId: category.id,
+        categoryName: category.name,
+        count: articles.totalCount,
+      };
+    })
+  );
+
+  return categoryCounts.filter((category) => category.count > 0);
 };
 
 // ブログの詳細を取得
@@ -48,9 +67,6 @@ export const getDetail = async (
     contentId,
     queries,
   });
-
-  // データの取得が目視しやすいよう明示的に遅延効果を追加
-  await new Promise((resolve) => setTimeout(resolve, 3000));
 
   return detailData;
 };
