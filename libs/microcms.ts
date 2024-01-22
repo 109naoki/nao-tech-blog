@@ -4,13 +4,20 @@ import type {
   MicroCMSImage,
   MicroCMSDate,
 } from "microcms-js-sdk";
-
+type Category = {
+  id: string;
+  name: string;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
+  revisedAt: string;
+};
 export type Blog = {
   id: string;
   title: string;
   content: string;
   eyecatch?: MicroCMSImage;
-  category: string[];
+  category: Category[];
 } & MicroCMSDate;
 
 if (!process.env.MICROCMS_SERVICE_DOMAIN) {
