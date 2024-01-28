@@ -1,23 +1,43 @@
+"use client";
 import { Blog } from "@/libs/microcms";
 
 import Image from "next/image";
 import Link from "next/link";
-import { FC } from "react";
+import { FC, useCallback, useEffect, useRef, useState } from "react";
 import { format } from "date-fns";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import { useSearchParams } from "next/navigation";
 type ContentsProps = {
   contents: Blog[];
 };
 export const Contents: FC<ContentsProps> = ({ contents }) => {
+  // const searchParams = useSearchParams();
+  // const q = searchParams.get("q");
+
+  // const searchRef = useRef<HTMLInputElement>(null);
+  const [searchText, setSearchText] = useState("");
+
+  // useEffect(() => {
+  //   if (q) {
+  //     setSearchText(q);
+  //   }
+  // }, [q]);
+
   return (
     <>
-      {/* <div className="search-area">
-        <form action="#" className="search-form-6">
+      <div className="search-area">
+        <form action="/search" className="search-form-6" method="GET">
           <label>
-            <input type="text" aria-label="キーワードを入力" />
+            <input
+              aria-label="キーワードを入力"
+              name="q"
+              type="search"
+              value={searchText}
+              onChange={(e) => setSearchText(e.target.value)}
+            />
           </label>
         </form>
-      </div> */}
+      </div>
       <div className="contents-area">
         <h1>最新の投稿</h1>
         <ul className="contents-grid">
