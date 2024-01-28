@@ -77,3 +77,5 @@ export const getDetail = async (
 
   return detailData;
 };
+
+// category[contains]network
