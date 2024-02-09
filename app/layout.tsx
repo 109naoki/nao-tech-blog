@@ -5,7 +5,7 @@ import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { getCategoryArticleCounts } from "@/libs/microcms";
 import Providers from "./providers";
-// TODO metaタグの設定
+
 export const metadata: Metadata = {
   title: "nao tech blog",
   description: "技術に関連する情報発信",

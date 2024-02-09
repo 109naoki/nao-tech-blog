@@ -25,8 +25,8 @@ export const Contents: FC<ContentsProps> = ({ contents }) => {
 
   return (
     <>
-      <div className="search-area">
-        <form action="/search" className="search-form-6" method="GET">
+      {/* <div className="search-area"> */}
+      {/* <form action="/search" className="search-form-6" method="GET">
           <label>
             <input
               aria-label="キーワードを入力"
@@ -36,8 +36,8 @@ export const Contents: FC<ContentsProps> = ({ contents }) => {
               onChange={(e) => setSearchText(e.target.value)}
             />
           </label>
-        </form>
-      </div>
+        </form> */}
+      {/* </div> */}
       <div className="contents-area">
         <h1>最新の投稿</h1>
         <ul className="contents-grid">

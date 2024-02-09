@@ -29,7 +29,7 @@ export const Header: FC<HeaderProps> = ({ categories }) => {
           <Image src="/icon.png" width={80} height={60} alt="アイコン画像" />
         </Link>
 
-        <MenuIcon
+        {/* <MenuIcon
           fontSize="large"
           onClick={openMenu}
           className="white-menu-icon"
@@ -45,7 +45,7 @@ export const Header: FC<HeaderProps> = ({ categories }) => {
               </div>
             ))}
           </div>
-        )}
+        )} */}
       </div>
     </header>
   );
