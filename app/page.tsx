@@ -6,7 +6,7 @@ export const revalidate = 3600;
 
 export default async function Page() {
   const { contents } = await getList({
-    limit: 10,
+    limit: 20,
   });
 
   return (

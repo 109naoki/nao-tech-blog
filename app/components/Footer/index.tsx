@@ -6,7 +6,7 @@ export const Footer = () => {
       <nav>
         <ul className="footer-2__list">
           <li>
-            <a href="#">
+            <a href="https://twitter.com/naoki_0525_109">
               <svg
                 className="footer-2__sns-icon"
                 xmlns="http://www.w3.org/2000/svg"
@@ -20,7 +20,7 @@ export const Footer = () => {
             </a>
           </li>
           <li>
-            <a href="https://github.com">
+            <a href="https://github.com/109naoki">
               <svg
                 className="footer-2__sns-icon"
                 xmlns="http://www.w3.org/2000/svg"
